@@ -27,21 +27,21 @@ echo -e "\033[1;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
 tput cnorm
 }
 #
-rm /root/painelv28.sh > /dev/null 2>&1
-rm $HOME/painelv28.sh > /dev/null 2>&1
-rm /root/PAINEL-V.28.zip > /dev/null 2>&1
-rm $HOME/PAINEL-V.28.zip > /dev/null 2>&1
+rm /root/painelv25.sh > /dev/null 2>&1
+rm $HOME/painelv25.sh > /dev/null 2>&1
+rm /root/PAINEL-V.25.zip > /dev/null 2>&1
+rm $HOME/PAINEL-V.25.zip > /dev/null 2>&1
 IP=$(wget -qO- ipv4.icanhazip.com)
 echo "America/Sao_Paulo" > /etc/timezone
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
-rm $HOME/painelv28.sh > /dev/null 2>&1
-rm /root/PAINEL-V.28.zip > /dev/null 2>&1
+rm $HOME/painelv25.sh > /dev/null 2>&1
+rm /root/PAINEL-V.25.zip > /dev/null 2>&1
 
 echo -e "\E[44;1;37m    INSTALAR O PAINEL SSH/DROP/SSL V.23 VIP-VPS     \E[0m"
 apt-get install figlet -y > /dev/null 2>&1
 echo ""
-echo -e "                              \033[1;31mBy @Couty_SSH\033[1;36m"
+echo -e "                              \033[1;31mBy @adeilsonfi\033[1;36m"
 echo -e "   VIP-vps" | figlet 
 echo ""
 echo -ne "\n\033[1;32m  DEFINA UMA SENHA PARA O\033[1;33m MySQL\033[1;37m: "; read senha
@@ -127,8 +127,8 @@ echo ""
 clear
 echo -e "\E[44;1;37m    INSTALAR O PAINEL SSH/DROP/SSL V.23 VIP-VPS     \E[0m"
 echo ""
-echo -e "                              \033[1;31mBy @Couty_SSH\033[1;36m"
-echo -e "   Couty SSH" | figlet
+echo -e "                              \033[1;31mBy @adeilsonfi\033[1;36m"
+echo -e "   VIP-vps" | figlet
 echo ""
 echo -e "\033[1;31m ATENCAO \033[1;33m!!!"
 echo ""
@@ -142,10 +142,10 @@ clear
 #
 echo -e "           \033[1;33m● \033[1;32mFINALIZANDO INSTALACAO, PODE DEMORAR \033[1;33m● \033[1;33mAGUARDE...\033[0m"
 cd /var/www/html
-wget https://download1335.mediafire.com/2i6n651fuqyg/2h0yluqq2les8sm/PAINEL-V.28.zip > /dev/null 2>&1
+wget https://www.dropbox.com/s/qfqmk2idw7b85jk/PAINEL-V.25.zip > /dev/null 2>&1
 sleep 1
-unzip PAINEL-V.28.zip > /dev/null 2>&1
-rm -rf PAINEL-V.28.zip index.html > /dev/null 2>&1
+unzip PAINEL-V.25.zip > /dev/null 2>&1
+rm -rf PAINEL-V.25.zip index.html > /dev/null 2>&1
 service apache2 restart
 sleep 1
 if [[ -e "/var/www/html/pages/system/pass.php" ]]; then
@@ -153,7 +153,7 @@ sed -i "s;1010;$senha;g" /var/www/html/pages/system/pass.php > /dev/null 2>&1
 fi
 sleep 1
 cd
-wget https://download1589.mediafire.com/snv6z2pfjwvg/0565ygi7g8fpqk3/BD-Painel-v23.sql > /dev/null 2>&1
+wget http://www.painelweb.tk/BD-Painel-v23.sql > /dev/null 2>&1
 sleep 1
 if [[ -e "$HOME/BD-Painel-v23.sql" ]]; then
     mysql -h localhost -u root -p$senha --default_character_set utf8 sshplus < BD-Painel-v23.sql
@@ -196,7 +196,7 @@ clear
 echo ""
 #
 clear
-echo -e "\033[1;32m PAINEL-SSH v.28 INSTALADO COM SUCESSO!"
+echo -e "\033[1;32m PAINEL-SSH v.25 INSTALADO COM SUCESSO!"
 echo ""
 echo -e "\033[1;36m SEU PAINEL:\033[1;37m http://$IP/\033[0m"
 echo -e "\033[1;36m USUARIO:\033[1;37m admin\033[0m"
@@ -217,5 +217,5 @@ sleep 6
 echo -e "\033[1;31mREINICIANDO...\033[0m"
 shutdown -r now
 cat /dev/null > ~/.bash_history && history -c
-rm /root/painelv28.sh > /dev/null 2>&1
-rm /root/PAINEL-V.28.zip > /dev/null 2>&1
+rm /root/painelv25.sh > /dev/null 2>&1
+rm /root/PAINEL-V.25.zip > /dev/null 2>&1
