@@ -38,11 +38,11 @@ dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 rm $HOME/painelv25.sh > /dev/null 2>&1
 rm /root/PAINEL-V.25.zip > /dev/null 2>&1
 
-echo -e "\E[44;1;37m    INSTALAR O PAINEL SSH/DROP/SSL V.23 VIP-VPS     \E[0m"
+echo -e "\E[44;1;37m    INSTALAR O PAINEL WEB SSH/DROP/SSL V.31 VPN-SSH     \E[0m"
 apt-get install figlet -y > /dev/null 2>&1
 echo ""
-echo -e "                              \033[1;31mBy @adeilsonfi\033[1;36m"
-echo -e "   VIP-vps" | figlet 
+echo -e "                              \033[1;31mBy @CoutySSH\033[1;36m"
+echo -e "   V-31" | figlet 
 echo ""
 echo -ne "\n\033[1;32m  DEFINA UMA SENHA PARA O\033[1;33m MySQL\033[1;37m: "; read senha
 echo -e "\n\033[1;36m  INICIANDO INSTALACAO \033[1;33m"
@@ -125,10 +125,10 @@ fun_bar 'fun_curl'
 echo ""
 #
 clear
-echo -e "\E[44;1;37m    INSTALAR O PAINEL SSH/DROP/SSL V.23 VIP-VPS     \E[0m"
+echo -e "\E[44;1;37m    INSTALAR O PAINEL WEB SSH/DROP/SSL V.31 VPN-SSH     \E[0m"
 echo ""
-echo -e "                              \033[1;31mBy @adeilsonfi\033[1;36m"
-echo -e "   VIP-vps" | figlet
+echo -e "                              \033[1;31mBy @CoutySSH\033[1;36m"
+echo -e "   V.31 VPN-SSH" | figlet
 echo ""
 echo -e "\033[1;31m ATENCAO \033[1;33m!!!"
 echo ""
@@ -196,7 +196,7 @@ clear
 echo ""
 #
 clear
-echo -e "\033[1;32m PAINEL-SSH v.25 INSTALADO COM SUCESSO!"
+echo -e "\033[1;32m PAINEL-WEB v.31 INSTALADO COM SUCESSO!"
 echo ""
 echo -e "\033[1;36m SEU PAINEL:\033[1;37m http://$IP/\033[0m"
 echo -e "\033[1;36m USUARIO:\033[1;37m admin\033[0m"
